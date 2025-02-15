@@ -1,0 +1,22 @@
+# Creating a password manager.
+
+def password_manager():
+
+  password = int(input("Enter a password :"))
+  chance_taken = 0
+  
+  while chance_taken <= 5:
+    print("Type below")
+    user_input = int(input("Enter password :"))
+    chance_taken +=1
+    
+    if user_input == password:
+      print("Access Granted")
+      break  # Break the loop if the password is correct
+    else:
+      print("Wrong password. Please try again.")
+
+if user_input != password and chance_taken == 6:
+    print("Access Denied. Too many attempts.")
+
+password_manager()
